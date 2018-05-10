@@ -1,0 +1,84 @@
+.states {
+	fill: #EEEEEE;
+	stroke: #88AADD;
+}
+
+.airport {
+	pointer-events: none;
+}
+
+.airport-cell {
+	fill: none;
+	/*stroke: #000;*/
+	/*stroke-opacity: 0.1;*/
+	pointer-events: all;
+}
+
+.airport-dots {
+	stroke: black;
+}
+
+.airport-arcs {
+	fill: none;
+}
+.airport-arc {
+	stroke-width: 0.05;
+	transition: stroke-width 0.7s linear;
+}
+
+.airport:hover .airport-arcs .airport-arc {
+	stroke-width: 5;
+	z-index: 10;
+}
+
+.header {
+	position: fixed;
+	width: 100%;
+	height: 64px;
+	background: #333;
+	color: #EEE;
+}
+
+.header label, .update, .info {
+	font-size: 20pt;
+	font-family: helvetica;
+	line-height: 32px;
+}
+
+.header select {
+	font-size: 20pt;
+	background: #333;
+	color: white;
+	padding: 10px 20px;
+	border: 2px white solid;
+}
+
+.update {
+	height: 100%;
+	padding: 0 20px;
+	background-color: #666;
+	border: none;
+	color: #EEE;
+}
+#minFlight {
+	margin: 0 10px;
+}
+
+.flex-hori {
+	display: flex;
+	flex-flow: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.info {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	background-color: #222;
+	height: 200px;
+	width: 400px;
+	padding: 10px;
+	color: #FFF;
+	line-height: 32px;
+}

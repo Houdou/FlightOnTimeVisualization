@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<title>CSIT5800 Group 9: On-Time perforamance visualization</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+		</style>
+		<link rel="stylesheet" href="styles.css">
+		<script src="https://d3js.org/d3.v5.min.js"></script>
+		<script src="./d3-array.js"></script>
+		<script src="./d3-geo.js"></script>
+		<script src="./d3-geo-projection.js"></script>
+		<script src="./main.js"></script>
+	</head>
+	<body>
+		<div class="header flex-hori">
+			<span>
+				<label for="year">Year: </label>
+					<select name="year" id="year">
+					<option value="2017">2017</option>
+					<option value="2016">2016</option>
+				</select>
+			</span>
+			<span>
+				<label for="month">Month: </label>
+				<select name="month" id="month">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+				</select>
+			</span>
+			<span class="min-flight">
+				<label for="minFlight">Minimum flights: <span id="sliderValue">0</span></label>
+				<input type="range" min="0" max="200" step="5" value="0" id="minFlight"/></span>
+			<span class><button id="rebuild" class="update">Click to update</button></span>
+		</div>
+		<div class="float">
+			<h3 class="info" id="info"></h3>
+		</div>
+	</body>
+</html>
